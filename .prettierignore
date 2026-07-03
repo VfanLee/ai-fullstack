@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+.reinit-backups
+.turbo
+
+apps/*/dist
+packages/*/dist
+
+pnpm-lock.yaml
