@@ -10,6 +10,10 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "dev:admin": "pnpm --filter @ai-fullstack/web-admin dev",
+    "dev:api": "pnpm --filter @ai-fullstack/api dev",
+    "dev:h5": "pnpm --filter @ai-fullstack/web-h5 dev",
+    "dev:shared": "pnpm --filter @ai-fullstack/shared dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "turbo run lint",
