@@ -4,17 +4,17 @@
   "private": true,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "dev": "tsc -p tsconfig.json --watch --preserveWatchOutput",
+    "build": "node ./scripts/build.mjs",
+    "dev": "node ./scripts/dev.mjs",
     "lint": "eslint src --ext .ts"
   }
 }
