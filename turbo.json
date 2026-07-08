@@ -10,6 +10,11 @@
       "cache": false,
       "persistent": true
     },
+    "@ai-fullstack/shared#dev": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
     "lint": {
       "outputs": []
     },
