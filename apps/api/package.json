@@ -11,33 +11,11 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "dev": "nest start --watch",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
     "start": "nest start",
     "start:debug": "nest start --debug --watch",
     "start:dev": "nest start --watch",
-    "start:prod": "APP_ENV=prod NODE_ENV=production node dist/main",
-    "test": "jest",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "APP_ENV=test DATABASE_URL=postgres://postgres:postgres@localhost:5432/ai_fullstack_test jest --config ./test/jest-e2e.json",
-    "test:watch": "jest --watch"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/*.(t|j)s"
-    ],
-    "coverageDirectory": "../coverage",
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": "src",
-    "testEnvironment": "node",
-    "testRegex": ".*\\.spec\\.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    }
+    "start:prod": "APP_ENV=prod NODE_ENV=production node dist/main"
   },
   "dependencies": {
     "@ai-fullstack/shared": "workspace:*",
@@ -56,15 +34,9 @@
     "@nestjs/cli": "^11.0.0",
     "@nestjs/mapped-types": "^2.1.1",
     "@nestjs/schematics": "^11.0.0",
-    "@nestjs/testing": "^11.0.1",
     "@types/express": "^5.0.0",
-    "@types/jest": "^30.0.0",
-    "@types/supertest": "^7.0.0",
     "drizzle-kit": "^0.31.10",
-    "jest": "^30.0.0",
     "source-map-support": "^0.5.21",
-    "supertest": "^7.0.0",
-    "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0"
