@@ -1,10 +1,14 @@
 node_modules
+.pnpm-store
+pnpm-lock.yaml
+
+# build & cache
 dist
 coverage
-.reinit-backups
 .turbo
 
-apps/*/dist
-packages/*/dist
+# generated
+apps/api/drizzle
 
-pnpm-lock.yaml
+# local / tooling backups
+.reinit-backups
