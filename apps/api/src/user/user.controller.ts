@@ -10,15 +10,15 @@ import { UserService } from './user.service'
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  /** 查询用户列表 */
+  /** 用户列表 */
   @Get()
   @ApiOperation({ summary: '用户列表' })
-  @ApiQuery({ name: 'name', required: false, description: '按名称模糊查询' })
-  getUsers(@Query('name') name?: string) {
-    return this.userService.findAll(name)
+  @ApiQuery({ name: 'username', required: false, description: '按用户名模糊查询' })
+  getUsers(@Query('username') username?: string) {
+    return this.userService.findAll(username)
   }
 
-  /** 查询单个用户 */
+  /** 单个用户 */
   @Get(':id')
   @ApiOperation({ summary: '单个用户' })
   @ApiParam({ name: 'id', description: '用户 ID' })
